@@ -21,7 +21,6 @@ This is a simple game where the computer thinks of a random number within a spec
 2.  Clone or download the project files.
 3.  Open your terminal or command prompt.
 4.  Navigate to the project directory.
-5.  Follow the on-screen instructions to guess the number.
 
 ## Project Files
 
