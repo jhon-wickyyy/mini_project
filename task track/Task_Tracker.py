@@ -30,7 +30,7 @@ class TaskTracker:
         with open(self.filename, 'w', encoding='utf-8') as f:
             json.dump(self.data, f, ensure_ascii=False, indent=4)
 
-    def add_task(self,taskname):
+    def add_task(self,taskname,description = " "):
         if not self.data:
             new_id = 1
         else:
@@ -42,7 +42,7 @@ class TaskTracker:
 
         self.data[str_id]= {
             "id":str_id,
-            "description":" ",
+            "description":description,
             "taskname": taskname,
             "status": "todo",
             "createdAt": current_time,
@@ -84,19 +84,17 @@ class TaskTracker:
 
 
     def list_tasks(self):
-        # for i in self.data:
-        #     print(self.data[i])
         if not self.data:
             print("目前没有任务。")
             return
 
             # 打印表头
-        print(f"{'ID':<5} {'状态':<12} {'任务名称'}")
+        print(f"{'ID':<5} {'状态':<12} {'任务名称':<17}{'任务描述'}")
         print("-" * 40)
 
         for t_id, task in self.data.items():
             # 使用 f-string 的对齐功能
-            print(f"{t_id:<5} {task['status']:<12} {task['taskname']}")
+            print(f"{t_id:<5} {task['status']:<12} {task['taskname']:<17}{task['description']}")
 
 def main():
     parser = argparse.ArgumentParser()
@@ -105,6 +103,7 @@ def main():
 
     add_tasks = sub_parser.add_parser('add',help='add a new task')
     add_tasks.add_argument('taskname',type=str,help='it is task`s name')
+    add_tasks.add_argument('-d',"--description",type=str,help='it is task`s description')
 
     delete_tasks = sub_parser.add_parser('delete',help='delete a task')
     delete_tasks.add_argument('task_id',help='it is task`s id')
@@ -120,7 +119,7 @@ def main():
     tasktracker = TaskTracker()
 
     if args.command == 'add':
-        tasktracker.add_task(args.taskname)
+        tasktracker.add_task(args.taskname,args.description)
     elif args.command == 'delete':
         tasktracker.delete_task(args.task_id)
     elif args.command == 'update':
