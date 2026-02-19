@@ -1,0 +1,15 @@
+# 忽略 IDE 配置文件 (比如 PyCharm 的 .idea)
+.idea/
+.vscode/
+
+# 忽略 Python 编译文件 (这一大堆乱码文件不需要上传)
+__pycache__/
+*.pyc
+
+# 忽略虚拟环境 (非常重要！否则你上传几万个文件)
+venv/
+env/
+
+# 忽略系统文件 (Mac/Windows 生成的缩略图缓存)
+.DS_Store
+Thumbs.db
