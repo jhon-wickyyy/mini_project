@@ -28,15 +28,10 @@ The list of commands and their usage is given below:
 ```bash
 # Adding a new task
 python3 task_tracker.py add "Buy groceries"
-# Output: Task added successfully (ID: 1)
-
-# Updating and deleting tasks
-python3 task_tracker.py update 1 "Buy groceries and cook dinner"
-python3 task_tracker.py delete 1
 
 # Marking a task as in progress or done
-python3 task_tracker.py mark-in-progress 1
-python3 task_tracker.py mark-done 1
+python3 task_tracker.py mark-in-progress 
+python3 task_tracker.py mark-done 
 
 # Listing all tasks
 python3 task_tracker.py list
@@ -60,3 +55,4 @@ Make sure to add these properties to the Database file when adding a new task an
 
 
 Happy coding!
+
