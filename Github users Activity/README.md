@@ -1,30 +1,43 @@
-# Number Guessing Game
+GitHub User Activity CLI
+A simple command-line tool to fetch and display the recent public activity of a GitHub user.
 
-A classic command-line number guessing game implemented in Python.
+Description
+This is a command-line application that uses the GitHub API to retrieve a user's recent public events. Instead of reading through complex JSON data, the application parses the data and displays a clean, concise summary of the user's 3 most recent actions—such as pushing commits, publishing releases, or creating new branches/repositories.
 
-## Description
+Features
+Fetches real-time public event data using the GitHub API.
 
-This is a simple game where the computer thinks of a random number within a specified range, and the player has to guess what that number is. The game provides feedback after each guess, telling the player if their guess was too high or too low. The goal is to guess the number in the fewest attempts possible.
+Automatically handles different types of GitHub events (Push, Release, Create, Delete).
 
-## Features
+Formats the raw JSON data into easy-to-read, human-friendly sentences.
 
-- The computer selects a random number between 1 and 100.
-- The player inputs their guess.
-- The game provides feedback on whether the guess is too high or too low.
-- The game congratulates the player upon guessing the correct number.
-- The game keeps track of the number of attempts made.
-- A hint system is included to help the player if they are stuck.
+Built entirely using Python's standard libraries (urllib, json, argparse)—no external dependencies required.
 
-## How to Play
+Takes the GitHub username directly as a command-line argument for quick usage.
 
-1.  Make sure you have Python installed on your system.
-2.  Clone or download the project files.
-3.  Open your terminal or command prompt.
-4.  Navigate to the project directory.
+How to Use
+Make sure you have Python installed on your system.
 
-## Project Files
+Clone or download the project files.
 
-- number_guess_game.py`: Contains the core logic for the number guessing game.
-- `README.md`: This file, providing information about the project.
+Open your terminal or command prompt.
 
-[Inspiration](https://roadmap.sh/projects/number-guessing-game)
+Navigate to the project directory.
+
+Run the script by passing a GitHub username as an argument. For example:
+
+Bash
+python github_activity.py kamranahmedse
+Example Output:
+
+Plaintext
+OUTPUT:
+- Pushed 3 commit(s) to kamranahmedse/developer-roadmap
+- Published release 1.1.0 in kamranahmedse/mondex
+- Created a new branch in kamranahmedse/test-repo
+Project Files
+github_activity.py: Contains the core logic for API requests, JSON parsing, and event formatting.
+
+README.md: This file, providing information about the project.
+
+[Inspiration](https://roadmap.sh/projects/github-user-activity)
