@@ -1,4 +1,4 @@
-#Python Mini Projects
+##Python Mini Projects
 
 Number Guessing Game - [Inspiration](https://roadmap.sh/projects/task-tracker)
 
