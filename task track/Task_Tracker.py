@@ -89,7 +89,7 @@ class TaskTracker:
             return
 
             # 打印表头
-        print(f"{'ID':<5} {'状态':<12} {'任务名称':<17}{'任务描述'}")
+        print(f"{'ID':<5} {'status':<12} {'taskname':<17}{'description'}")
         print("-" * 40)
 
         for t_id, task in self.data.items():
