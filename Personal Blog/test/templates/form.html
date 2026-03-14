@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{page_title}}</title>
+</head>
+<body>
+    <form method="POST" acion="{{action_url}}">
+
+        {{hidden_id_input}}
+
+        <div>
+            <label>标题：</label><br>
+            <input type="text" name="title" value="{{title_value}}" required>
+        </div>
+
+        <div>
+            <label>内容：</label><br>
+            <textarea name="content" cols="30" rows="10" required>{{content_value}}</textarea>
+        </div>
+
+        <button type="submit">[保存提交]</button>
+        <a href="/admin">取消</a>
+
+    </form>
+</body>
+</html>

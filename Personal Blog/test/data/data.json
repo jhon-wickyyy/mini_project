@@ -1,0 +1,23 @@
+[
+    {
+        "article_id": 1,
+        "title": "睡觉",
+        "content": "呼噜呼噜%E",
+        "date": "2026-03-02",
+        "username": "123"
+    },
+    {
+        "article_id": 2,
+        "title": "跑步",
+        "content": "每天运动十分钟，健康工作50年",
+        "date": "2026-03-09",
+        "username": "123"
+    },
+    {
+        "article_id": 3,
+        "title": "12312321",
+        "content": "12321",
+        "date": "2026-03-11",
+        "username": "123"
+    }
+]
