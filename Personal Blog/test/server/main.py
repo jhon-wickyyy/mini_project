@@ -25,7 +25,6 @@ def start_server():
             method = None
             raw_url = "/"
 
-            print(f"收到了{request_line}")
 
         parsed_url = urllib.parse.urlparse(raw_url)
         print(parsed_url)
